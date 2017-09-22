@@ -86,12 +86,12 @@ void do_lookup_entry(Phone_Directory& the_directory)
 }
 
 void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please complete the function do_remove_entry - Ed/Kent
-{
-	string name;
-	cout << "Enter name: ";
-	getline(cin, name);
-	// Complete the rest of this function 
-	
+{ // Coded as "Step 7" of HW2 by Tyler Seymour.
+	string name;  // Variable to store a name.
+	cout << "Enter name: "; // Prompt to user to input name.
+	getline(cin, name); // Put result of user input into "name".
+	the_directory.remove_entry(name); // Call "remove_entry()" and pass the name of the directory to be removed.
+	cout << "The directory for" << name << "has been successfully removed.\n"; // Print message that the directory was deleted.
 }
 
 void do_save(Phone_Directory& the_directory)

@@ -53,24 +53,31 @@ public:
 	void save();
 
 private:
-	class Directory_Entry 
+	class Directory_Entry // Coded as "Step 5" of HW2 by Tyler Seymour.
 	{
-	public:   
+	public:
 		Directory_Entry() {} // Default no-argument constructor 
-		Directory_Entry(std::string the_name, std::string the_number) {
-			// constructor not implemented yet
+		Directory_Entry(std::string the_name, std::string the_number) { // creates a directory with the name and number provided.
+			name = the_name;// Sets the name for this directory to the parameter "the_name".
+			number = the_number;// Sets the number for this directory to the parameter "the_number".
 		}
-		std::string get_name() const {
-			return ""; // method not implemented yet
+		std::string get_name() const
+		{ // Returns the value of the string "name".
+			return name;
 		}
-		std::string get_number() const {
-			return ""; // method not implemented yet
+		std::string get_number() const
+		{ // Returns the value of the string "number".
+			return number;
 		}
-		void set_number(const std::string& new_number) {
-			// method not implemented yet
+		void set_number(const std::string& new_number)
+		{ // Changes the value of number to the parameter "new_number"
+			number = new_number;
 		}
 
-	private:  
+	private:
+		std::string name; // The name variable for a directory entry.
+		std::string number; // The number variable for a directory entry.
+
 	};
 
 	// Private Functions
